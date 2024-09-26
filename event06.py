@@ -38,7 +38,7 @@ evento01["content"] = "Hello World!"
 
 #gerando id
 conteudo_evento = [evento01["id"], evento01["pubkey"], evento01["created_at"], evento01["kind"], evento01["tags"], evento01["content"]]
-conteudo_evento = json.dumps(conteudo_evento).replace(" ","")
+conteudo_evento = json.dumps(conteudo_evento, separators=(",",":"), ensure_ascii=False)
 id_evento_obj = hashlib.sha256(conteudo_evento.encode("utf-8"))
 id_evento = id_evento_obj.hexdigest()
 evento01["id"] = id_evento
