@@ -1,5 +1,6 @@
+# "relayPool" obsoleto substituido por "message"
+
 import json
-import message
 from websockets.sync.client import connect
 
 class RelayPool:
