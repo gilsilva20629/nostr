@@ -31,7 +31,7 @@ class Event:
 		self.id = hashlib.sha256(str_content).hexdigest()
 		return self.id
 
-	def serialise(self):
+	def serialize(self):
 		if self.sig == None	:
 			print("Please, sign event!")
 			return None
